@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6ea;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 350px;
+        }
+        h1 {
+            color: #e63946;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .hearts {
+            color: #e63946;
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #yesBtn {
+            background-color: #e63946;
+            color: white;
+        }
+        #yesBtn:hover {
+            background-color: #c1121f;
+        }
+        #noBtn {
+            background-color: #457b9d;
+            color: white;
+        }
+        #noBtn:hover {
+            background-color: #1d3557;
+        }
+        #response {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="hearts">❤️ ❤️ ❤️</div>
+        <h1>Will You Be My Valentine Baby ko?</h1>
+        <div class="hearts">❤️ ❤️ ❤️</div>
+        
+        <button id="yesBtn">YES!</button>
+        <button id="noBtn">NO!</button>
+        
+        <div id="response"></div>
+    </div>
+
+    <script>
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+        const responseDiv = document.getElementById('response');
+
+        yesBtn.addEventListener('click', () => {
+            responseDiv.textContent = " YEYYYYY! THANKYOUU SO MUCH ABUNJING KO ILOVEYOUUU!❤️";
+            responseDiv.style.color = '#e63946';
+        });
+
+        noBtn.addEventListener('click', () => {
+            responseDiv.textContent = "MAAWA KA NAMAN SAKIN BE OHH, SGE KA MAG TA-TANTRUMS TALAGA AKO DITO :<";
+            responseDiv.style.color = '#457b9d';
+        });
+    </script>
+</body>
+</html>
